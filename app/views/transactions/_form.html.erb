@@ -1,27 +1,35 @@
-<%= form_with(model: transaction) do |form| %>
-  <% if transaction.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3778c2;">
+  <div class="d-flex justify-content-between align-items-center w-100">
+    <%= link_to categories_path, class: "navbar-brand text-white", style: "padding: 0;" do %>
+      
+    <% end %>
+    <p class="text-center text-white mb-0">New Transaction</p>
+   
+  </div>
+</nav>
 
-      <ul>
-        <% transaction.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+
+<div class="container mt-3" style="max-width: 400px; margin: 0 auto;">
+  <%= form_with(model: @transaction) do |form| %>
+
+    <div class="form-group mb-3">
+      <%= form.text_field :name, placeholder: "Name", class: "form-control" %>
+    </div>
+
+    <div class="form-group mb-3">
+      <%= form.text_field :amount, placeholder: "Amount", class: "form-control" %>
+    </div>
+
+    <div class="form-group mb-3">
+      <%= form.collection_select :category_id, Category.all, :id, :name, { prompt: "Select a category" }, class: "form-control" %>
+    </div>
+
+    <div class="form-group mb-3">
+      <%= form.collection_select :category_id, Category.all, :id, :name, { prompt: "Select a category" }, class: "form-control"  %>
+    </div>
+
+    <div class="form-group mb-3">
+      <%= form.submit "Create Transaction", class: "btn btn-primary", style: "background-color: #3778c2;" %>
     </div>
   <% end %>
-
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div>
-    <%= form.label :amount, style: "display: block" %>
-    <%= form.number_field :amount %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

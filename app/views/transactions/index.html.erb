@@ -1,7 +1,8 @@
 <p style="color: green"><%= notice %></p>
-
+<header>
+<%= render 'layouts/navcat' %>
 <h1>Transactions</h1>
-
+</header>
 <div id="transactions">
   <% @transactions.each do |transaction| %>
     <%= render transaction %>
