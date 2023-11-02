@@ -13,3 +13,56 @@
  *= require_tree .
  *= require_self
  */
+@import 'bootstrap';
+
+.logo {
+  width: 30%;
+}
+
+.logo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7%;
+}
+
+.btn {
+  width: 30%;
+  margin: 10px;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.log {
+  width: 35%;
+}
+
+.left {
+  width: 30px;
+  height: 30px;
+}
+
+.new {
+  text-align: center;
+}
+
+.form {
+  margin: 20px;
+}
+
+.name {
+  margin-right: 50%;
+}
+
+h2 {
+  margin-right: 50%;
+}
+
+.crte {
+  width: 50%;
+}
