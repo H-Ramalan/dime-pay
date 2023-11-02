@@ -85,6 +85,4 @@ test:
 #
 production:
   <<: *default
-  database: DimePay_production
-  username: DimePay
-  password: <%= ENV["DIMEPAY_DATABASE_PASSWORD"] %>
+  url: <%= ENV[DATABASE_URL'] %>
