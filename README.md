@@ -146,7 +146,7 @@ DimePal is a powerful and user-friendly Rails budgeting application designed to 
 
 > Video Presentation of this application:
 
-- [Video Presentation]
+- [Video Presentation](https://www.loom.com/share/422a624671354d1ea159afa6667caf5c)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- GETTING STARTED -->
