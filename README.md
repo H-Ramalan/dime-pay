@@ -1,5 +1,5 @@
 <div align="center">
-  <h1><b>DimePal</b></h1>
+  <h1><b>DimePay</b></h1>
 </div>
 
 <a name="readme-top"></a>
@@ -138,7 +138,7 @@ DimePal is a powerful and user-friendly Rails budgeting application designed to 
 
 > Live Demo of this application:
 
-- [Live Demo Link]
+- [Live Demo Link](https://dimepay.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -165,7 +165,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/H-Ramalan/DimePal.git
+  git clone https://github.com/H-Ramalan/DimePay.git
 ```
 
 ### Install
@@ -236,7 +236,7 @@ Example:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/H-Ramalan/Dimepal/issues).
+Feel free to check the [issues page](https://github.com/H-Ramalan/Dimepay/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
