@@ -6,7 +6,7 @@ RSpec.feature 'Transactions', type: :feature do
     sign_in @user
     @category = Category.create(name: 'Travel', icon: 'icon', user: @user)
     @transaction = Transaction.create(name: 'trip', amount: 344, user: @user)
-    visit '/categories/1'
+    visit '/categories/category_id'
   end
 
   it 'should have category name' do
