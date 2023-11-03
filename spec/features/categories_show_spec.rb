@@ -1,27 +1,33 @@
 require 'rails_helper'
 
-RSpec.feature 'Transactions', type: :feature do
+RSpec.feature 'Categories', type: :feature do
+  let(:user) { create(:user) }
+
   before do
-    @user = User.create(name: 'User', email: 'test@gmail.com', password: '123456')
-    sign_in @user
-    @category = Category.create(name: 'Travel', icon: 'icon', user: @user)
-    @transaction = Transaction.create(name: 'trip', amount: 344, user: @user)
-    visit '/categories/category_id'
+    sign_in user
+    create(:category, name: 'Groceries', user:)
   end
 
-  it 'should have category name' do
-    expect(page).to have_content('Travel')
+  scenario 'User views category name' do
+    visit categories_path
+    expect(page).to have_content('Groceries')
   end
 
-  it 'should have button to add new transaction' do
-    expect(page).to have_content('Add a new transaction')
+  scenario 'User views category name' do
+    visit categories_path
+    category_name = 'Groceries'
+    expect(page).to have_content(category_name)
   end
 
-  it 'should display name of transaction' do
-    expect(page).to have_content('trip')
-  end
+  scenario 'User views individual transactions' do
+    category = create(:category, name: 'Example Category', user:)
+    transaction1 = create(:transaction, name: 'Transaction 1', amount: 5000, category:)
+    transaction2 = create(:transaction, name: 'Transaction 2', amount: 7500, category:)
 
-  it 'should dispaly total amount for the category' do
-    expect(page).to have_content('$344')
+    visit category_path(category)
+    expect(page).to have_content(transaction1.name)
+    expect(page).to have_content("$#{transaction1.amount}")
+    expect(page).to have_content(transaction2.name)
+    expect(page).to have_content("$#{transaction2.amount}")
   end
 end
